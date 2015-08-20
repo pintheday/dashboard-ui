@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>  <html class="lt-ie7"> <![endif]-->
+<!--[if IE 7]>     <html class="lt-ie8"> <![endif]-->
+<!--[if IE 8]>     <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>URINVITD Dashboard</title>
+
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+
+  <link rel="icon" type="image/png" href="assets/_con/images/icon.png">
+
+  <!-- nanoScroller -->
+  <link rel="stylesheet" type="text/css" href="assets/nanoScroller/nanoscroller.css" />
+
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.min.css" />
+
+  <!-- Material Design Icons -->
+  <link rel="stylesheet" type="text/css" href="assets/material-design-icons/css/material-design-icons.min.css" />
+
+  <!-- IonIcons -->
+  <link rel="stylesheet" type="text/css" href="assets/ionicons/css/ionicons.min.css" />
+
+  <!-- WeatherIcons -->
+  <link rel="stylesheet" type="text/css" href="assets/weatherIcons/css/weather-icons.min.css" />
+
+  <!-- nvd3 -->
+  <link rel="stylesheet" type="text/css" href="assets/nvd3/nv.d3.min.css" />
+
+  <!-- Google Prettify -->
+  <link rel="stylesheet" type="text/css" href="assets/google-code-prettify/prettify.css" />
+  <!-- Main -->
+  <link rel="stylesheet" type="text/css" href="assets/_con/css/_con.min.css" />
+
+  <!--[if lt IE 9]>
+    <script src="assets/html5shiv/html5shiv.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+<!-- Floating action button -->
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+  <a class="btn-floating btn-extra red">
+    <i class="large mdi-editor-mode-edit"></i>
+  </a>
+  <ul>
+    <li><a class="btn-floating red tooltipped" data-position="left" data-delay="50" data-tooltip="Create New Invitation"><i class="large mdi-content-add"></i></a></li>
+    <li><a class="btn-floating blue darken-1 tooltipped" data-position="left" data-delay="50" data-tooltip="Preview This Invitation"><i class="large mdi-image-remove-red-eye"></i></a></li>
+  </ul>
+</div>
+<!-- Floating action button ends-->
+  <!--
+  Top Navbar
+    Options:
+      .navbar-dark - dark color scheme
+      .navbar-static - static navbar
+      .navbar-under - under sidebar
+-->
+  <nav class="navbar-top">
+    <div class="nav-wrapper">
+
+      <!-- Sidebar toggle -->
+      <a href="#" class="yay-toggle">
+        <div class="burg1"></div>
+        <div class="burg2"></div>
+        <div class="burg3"></div>
+      </a>
+      <!-- Sidebar toggle -->
+
+      <!-- Logo -->
+      <a href="index.html" class="brand-logo">
+        <img src="assets/_con/images/logo1.png" alt="Con">
+      </a>
+      <!-- /Logo -->
+
+      <!-- Menu -->
+      <ul>
+        <li><a href="#!" class="search-bar-toggle"><i class="mdi-action-search"></i></a>
+        </li>
+        <li class="user">
+          <a class="dropdown-button" href="#!" data-activates="user-dropdown">
+            <img src="assets/_con/images/user.jpg" alt="John Doe" class="circle">Jane and John<i class="mdi-navigation-expand-more right"></i>
+          </a>
+
+          <ul id="user-dropdown" class="dropdown-content">
+            <li><a href="profile.html"><i class="fa fa-user"></i> Profile</a>
+            </li>
+            <li><a href="mail-inbox.html"><i class="fa fa-envelope"></i> Messages <span class="badge new">2</span></a>
+              <!--            </li>
+                          <li><a href="#!"><i class="fa fa-cogs"></i> Settings</a>
+                          </li>-->
+            <li class="divider"></li>
+            <li><a href="sign-in.html"><i class="fa fa-sign-out"></i> Logout</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <!-- /Menu -->
+
+    </div>
+  </nav>
+  <!-- /Top Navbar -->
+
+
+  <!--
+  Yay Sidebar
+  Options [you can use all of theme classnames]:
+    .yay-hide-to-small         - no hide menu, just set it small with big icons
+    .yay-static                - stop using fixed sidebar (will scroll with content)
+    .yay-gestures              - to show and hide menu using gesture swipes
+    .yay-light                 - light color scheme
+    .yay-hide-on-content-click - hide menu on content click
+
+  Effects [you can use one of these classnames]:
+    .yay-overlay  - overlay content
+    .yay-push     - push content to right
+    .yay-shrink   - shrink content width
+-->
+  <aside class="yaybar yay-shrink yay-hide-to-small yay-gestures">
+
+    <div class="top">
+      <div>
+        <!-- Sidebar toggle -->
+        <a href="#" class="yay-toggle">
+          <div class="burg1"></div>
+          <div class="burg2"></div>
+          <div class="burg3"></div>
+        </a>
+        <!-- Sidebar toggle -->
+
+        <!-- Logo -->
+        <a href="#!" class="brand-logo">
+          <img src="assets/_con/images/logo-white.png" alt="Con">
+        </a>
+        <!-- /Logo -->
+      </div>
+    </div>
+
+
+    <div class="nano">
+      <div class="nano-content">
+
+        <ul>
+          <li class="label">Howdy! Jane and John</li>
+          <li>
+            <a href="index.html" class="waves-effect waves-blue"><i class="fa fa-send"></i> Invite Guests</a>
+          </li>
+          <li>
+            <a href="guestboard.html" class="waves-effect waves-blue"><i class="fa fa-user"></i> Guest Board</a>
+          </li>
+
+          <li>
+            <a href="vendorboard.html" class="waves-effect waves-blue"><i class="mdi mdi-av-web"></i> Vendor Board</a>
+          </li>
+
+          <li>
+            <a class="yay-sub-toggle waves-effect waves-blue"><i class="mdi mdi-image-panorama"></i>Media<span class="yay-collapse-icon mdi-navigation-expand-more"></span></a>
+            <ul>
+              <li><a class="waves-effect waves-blue" href="photogallery.html"><i class="mdi mdi-image-collections"></i> Gallery</a>
+              </li>
+              <li><a class="waves-effect waves-blue" href="video-player.html"><i class="mdi mdi-av-play-circle-outline"></i> Videos</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="mail-inbox.html" class="waves-effect waves-blue"><i class="mdi mdi-av-web"></i> Greetings</a>
+          </li>
+          
+          <li>
+            <a href="songlist.html" class="waves-effect waves-blue"><i class="mdi mdi-av-queue-music"></i> Song Lists</a>
+          </li>
+
+          <li>
+            <a class="yay-sub-toggle waves-effect waves-blue"><i class="fa fa-edit"></i> Edit Invitation<span class="yay-collapse-icon mdi-navigation-expand-more"></span></a>
+            <ul>
+              <li><a class="waves-effect waves-blue" href="css-alerts.html"><i class="mdi-alert-warning"></i> Texts</a>
+              </li>
+              <li><a class="waves-effect waves-blue" href="css-badges.html"><i class="mdi-action-stars"></i> Images</a>
+              </li>
+              <li><a class="waves-effect waves-blue" href="css-colors.html"><i class="mdi-image-palette"></i> Colors</a>
+              </li>
+              <li><a class="waves-effect waves-blue" href="css-grid.html"><i class="mdi-action-dashboard"></i> Fonts</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" target="_blank" class="waves-effect waves-deep-orange"><i class="mdi-image-remove-red-eye"></i>Preview Invitation</a>
+          </li>
+          <li class="label">Stats</li>
+          <li class="content">
+            <span><i class="fa fa-spinner"></i> RSVP's</span>
+            <div class="progress small light-green lighten-4">
+              <div class="light-green accent-5" style="width: 37%"></div>
+            </div>
+
+            <span><i class="fa fa-thumbs-o-up"></i> Likes</span>
+            <div class="progress small">
+              <div style="width: 91%"></div>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </aside>
+  <!-- /Yay Sidebar -->
+
+
+  <!-- Main Content -->
+  <section class="content-wrap">
+   <div class="row">
+      <div class="card-panel">
+      <h4>Guest List</h4>
+
+      <div class="row">
+        <div class="col s12 l7">
+
+          <table id="table4" class="display table table-bordered table-striped table-hover">
+            <thead>
+              <tr>
+                <th>Guest Name</th>
+                <th>RSVP Status</th>
+                <th>Travel Mode</th>
+                <th>Reaching date</th>
+                <th>With Plus</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Tiger Nixon</td>
+                <td>Yes</td>
+                <td>Flight</td>
+                <td>2011/04/25</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Garrett Winters</td>
+                <td>Yes</td>
+                <td>Flight</td>
+                <td>2011/07/25</td>
+                 <td>3</td>
+              </tr>
+              <tr>
+                <td>Ashton Cox</td>
+                <td>Not </td>
+                 <td>Flight</td>
+                <td>2009/01/12</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Cedric Kelly</td>
+                <td>May Be </td>
+                <td>Flight</td>
+                <td>2012/03/29</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>Airi Satou</td>
+                <td>May Be </td>
+                <td>Flight</td>
+                <td>2008/11/28</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>Brielle Williamson</td>
+                 <td>May Be </td>
+                 <td>Bus</td>
+                <td>2012/12/02</td>
+                 <td>2</td>
+              </tr>
+              <tr>
+                <td>Herrod Chandler</td>
+                <td>Yes</td>
+                <td>Bus</td>
+                <td>2012/08/06</td>
+                 <td>1</td>
+              </tr>
+              <tr>
+                <td>Rhona Davidson</td>
+                <td>Not </td>
+                <td>Taxi</td>
+                <td>2010/10/14</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Colleen Hurst</td>
+               <td>Yes</td>
+                <td>Flight</td>
+                <td>2009/09/15</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>Sonya Frost</td>
+                <td>Yes</td>
+               <td>Train</td>
+                <td>2008/12/13</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Jena Gaines</td>
+                <td>Not </td>
+               <td>Train</td>
+                <td>2008/12/19</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Quinn Flynn</td>
+                <td>May Be </td>
+                <td>Train</td>
+                <td>2013/03/03</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Charde Marshall</td>
+                <td>Not </td>
+                <td>Train</td>
+                <td>2008/10/16</td>
+                <td>2</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+   </div>
+
+  </section>
+  <!-- /Main Content -->
+
+    <!-- Search Bar -->
+  <div class="search-bar">
+    <div class="layer-overlay"></div>
+    <div class="layer-content">
+      <form action="#!">
+        <!-- Header -->
+        <a class="search-bar-toggle grey-text text-darken-2" href="#!"><i class="mdi-navigation-close"></i></a>
+
+        <!-- Search Input -->
+        <div class="input-field">
+          <i class="mdi-action-search prefix"></i>
+          <input type="text" name="con-search" placeholder="Search...">
+        </div>
+
+        <!-- Search Results -->
+        <div class="search-results">
+
+          <div class="row">
+            <div class="col s12 l4">
+              <h4>Top Vendors</h4>
+
+              <div class="each-result">
+                <img src="assets/_con/images/user2.jpg" alt="Felecia Castro" class="circle photo">
+                <div class="title">Felecia Castro</div>
+                <div class="label">Event Manager</div>
+              </div>
+
+              <div class="each-result">
+                <img src="assets/_con/images/user3.jpg" alt="Max Brooks" class="circle photo">
+                <div class="title">Max Brooks</div>
+                <div class="label">Photographer</div>
+              </div>
+
+              <div class="each-result">
+                <img src="assets/_con/images/user4.jpg" alt="Patsy Griffin" class="circle photo">
+                <div class="title">Patsy Griffin</div>
+                <div class="label">Caterer and Florals</div>
+              </div>
+
+              <div class="each-result">
+                <img src="assets/_con/images/user6.jpg" alt="Vernon Garrett" class="circle photo">
+                <div class="title">Vernon Garrett</div>
+                <div class="label">Banquets</div>
+              </div>
+            </div>
+            <div class="col s12 l4">
+              <h4>More Vendors</h4>
+
+              <div class="each-result">
+                <div class="icon circle blue white-text">MD</div>
+                <div class="title">Vernon Garrett</div>
+                <div class="label nowrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi consequatur debitis veritatis dolorum, enim libero!</div>
+              </div>
+
+              <div class="each-result">
+                <div class="icon circle teal white-text">
+                  <i class="fa fa-dashboard"></i>
+                </div>
+                <div class="title">Marriage Inc.</div>
+                <div class="label nowrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi consequatur debitis veritatis dolorum, enim libero!</div>
+              </div>
+
+              <div class="each-result">
+                <div class="icon circle orange white-text">RD</div>
+                <div class="title">Photos Inc.</div>
+                <div class="label nowrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi consequatur debitis veritatis dolorum, enim libero!</div>
+              </div>
+
+              <div class="each-result">
+                <div class="icon circle red white-text">
+                  <i class="fa fa-tablet"></i>
+                </div>
+                <div class="title">Banquets Inc.</div>
+                <div class="label nowrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi consequatur debitis veritatis dolorum, enim libero!</div>
+              </div>
+            </div>
+            <div class="col s12 l4">
+              <h4>Guests</h4>
+
+              <div class="no-result">No results were found ;(</div>
+            </div>
+          </div>
+
+        </div>
+
+      </form>
+    </div>
+  </div>
+  <!-- /Search Bar -->
+
+
+
+
+  <footer>&copy; 2015 <strong>nK</strong>. All rights reserved. <a href="http://deepakpathak.in/urinvitd">URINVITD</a>
+  </footer>
+  <!-- DEMO [REMOVE IT ON PRODUCTION] -->
+  <script type="text/javascript" src="assets/_con/js/_demo.js"></script>
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="assets/jquery/jquery.min.js"></script>
+
+  <!-- jQuery RAF (improved animation performance) -->
+  <script type="text/javascript" src="assets/jqueryRAF/jquery.requestAnimationFrame.min.js"></script>
+
+  <!-- nanoScroller -->
+  <script type="text/javascript" src="assets/nanoScroller/jquery.nanoscroller.min.js"></script>
+
+  <!-- Materialize -->
+  <script type="text/javascript" src="assets/materialize/js/materialize.min.js"></script>
+
+
+  <!-- Simple Weather -->
+  <script type="text/javascript" src="assets/simpleWeather/jquery.simpleWeather.min.js"></script>
+
+  <!-- d3 -->
+  <script type="text/javascript" src="assets/d3/d3.min.js"></script>
+
+  <!-- nvd3 -->
+  <script type="text/javascript" src="assets/nvd3/nv.d3.min.js"></script>
+    <!-- Data Tables -->
+  <script type="text/javascript" src="assets/dataTables/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="assets/dataTables/extensions/TableTools/js/dataTables.tableTools.min.js"></script>
+  <script type="text/javascript" src="assets/dataTables/extensions/Scroller/js/dataTables.scroller.min.js"></script>
+  <!-- Sortable -->
+  <script type="text/javascript" src="assets/sortable/Sortable.min.js"></script>
+  <!-- Sortable -->
+  <script type="text/javascript" src="assets/sortable/Sortable.min.js"></script>
+
+  <!-- Main -->
+  <script type="text/javascript" src="assets/_con/js/_con.min.js"></script>
+
+
+  <!-- Google Prettify -->
+  <script type="text/javascript" src="assets/google-code-prettify/prettify.js"></script>
+  <script>
+/*    $('#table4').DataTable({
+      "iDisplayLength": 5,
+      "bLengthChange": false,
+      "filter": false,
+      "dom": 'Tlfrtip',
+      "aLengthMenu": [
+        [5, 10, 25, 50, -1],
+        [5, 10, 25, 50, "all"]
+      ],
+      "tableTools": {
+        "sSwfPath": "assets/dataTables/extensions/TableTools/swf/copy_csv_xls_pdf.swf"
+      }
+    });*/
+        /*
+     * DataTable with Search
+     */
+    $('#table4').DataTable({
+      "iDisplayLength": 5,
+      "aLengthMenu": [
+        [5, 10, 25, 50, -1],
+        [5, 10, 25, 50, "all"]
+      ], 
+      "dom": 'Tlfrtip',
+      "tableTools": {
+        "sSwfPath": "assets/dataTables/extensions/TableTools/swf/copy_csv_xls_pdf.swf"
+      }
+    });
+  </script>
+</body>
+
+</html>

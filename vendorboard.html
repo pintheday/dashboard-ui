@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>  <html class="lt-ie7"> <![endif]-->
+<!--[if IE 7]>     <html class="lt-ie8"> <![endif]-->
+<!--[if IE 8]>     <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>URINVITD Dashboard</title>
+
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+
+  <link rel="icon" type="image/png" href="assets/_con/images/icon.png">
+
+  <!-- nanoScroller -->
+  <link rel="stylesheet" type="text/css" href="assets/nanoScroller/nanoscroller.css" />
+
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.min.css" />
+
+  <!-- Material Design Icons -->
+  <link rel="stylesheet" type="text/css" href="assets/material-design-icons/css/material-design-icons.min.css" />
+
+  <!-- IonIcons -->
+  <link rel="stylesheet" type="text/css" href="assets/ionicons/css/ionicons.min.css" />
+
+  <!-- WeatherIcons -->
+  <link rel="stylesheet" type="text/css" href="assets/weatherIcons/css/weather-icons.min.css" />
+
+  <!-- nvd3 -->
+  <link rel="stylesheet" type="text/css" href="assets/nvd3/nv.d3.min.css" />
+
+  <!-- Google Prettify -->
+  <link rel="stylesheet" type="text/css" href="assets/google-code-prettify/prettify.css" />
+
+    <!--Animate-->
+    <link rel="stylesheet" type="text/css" href="assets/animate.css/animate.css" />
+  <!-- Main -->
+  <link rel="stylesheet" type="text/css" href="assets/_con/css/_con.min.css" />
+
+  <!--[if lt IE 9]>
+    <script src="assets/html5shiv/html5shiv.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+<!-- Floating action button -->
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+  <a class="btn-floating btn-extra red">
+    <i class="large mdi-editor-mode-edit"></i>
+  </a>
+  <ul>
+    <li><a class="btn-floating red tooltipped" data-position="left" data-delay="50" data-tooltip="Create New Invitation"><i class="large mdi-content-add"></i></a></li>
+    <li><a class="btn-floating blue darken-1 tooltipped" data-position="left" data-delay="50" data-tooltip="Preview This Invitation"><i class="large mdi-image-remove-red-eye"></i></a></li>
+  </ul>
+</div>
+<!-- Floating action button ends-->
+  <!--
+  Top Navbar
+    Options:
+      .navbar-dark - dark color scheme
+      .navbar-static - static navbar
+      .navbar-under - under sidebar
+-->
+  <nav class="navbar-top">
+    <div class="nav-wrapper">
+
+      <!-- Sidebar toggle -->
+      <a href="#" class="yay-toggle">
+        <div class="burg1"></div>
+        <div class="burg2"></div>
+        <div class="burg3"></div>
+      </a>
+      <!-- Sidebar toggle -->
+
+      <!-- Logo -->
+      <a href="#!" class="brand-logo">
+        <img src="assets/_con/images/logo1.png" alt="Con">
+      </a>
+      <!-- /Logo -->
+
+      <!-- Menu -->
+      <ul>
+        <li><a href="#!" class="search-bar-toggle"><i class="mdi-action-search"></i></a>
+        </li>
+        <li class="user">
+          <a class="dropdown-button" href="#!" data-activates="user-dropdown">
+            <img src="assets/_con/images/user.jpg" alt="John Doe" class="circle">Jane and John<i class="mdi-navigation-expand-more right"></i>
+          </a>
+
+          <ul id="user-dropdown" class="dropdown-content">
+            <li><a href="profile.html"><i class="fa fa-user"></i> Profile</a>
+            </li>
+            <li><a href="mail-inbox.html"><i class="fa fa-envelope"></i> Messages <span class="badge new">2</span></a>
+              <!--            </li>
+                          <li><a href="#!"><i class="fa fa-cogs"></i> Settings</a>
+                          </li>-->
+            <li class="divider"></li>
+            <li><a href="sign-in.html"><i class="fa fa-sign-out"></i> Logout</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <!-- /Menu -->
+
+    </div>
+  </nav>
+  <!-- /Top Navbar -->
+
+
+  <!--
+  Yay Sidebar
+  Options [you can use all of theme classnames]:
+    .yay-hide-to-small         - no hide menu, just set it small with big icons
+    .yay-static                - stop using fixed sidebar (will scroll with content)
+    .yay-gestures              - to show and hide menu using gesture swipes
+    .yay-light                 - light color scheme
+    .yay-hide-on-content-click - hide menu on content click
+
+  Effects [you can use one of these classnames]:
+    .yay-overlay  - overlay content
+    .yay-push     - push content to right
+    .yay-shrink   - shrink content width
+-->
+  <aside class="yaybar yay-shrink yay-hide-to-small yay-gestures">
+
+    <div class="top">
+      <div>
+        <!-- Sidebar toggle -->
+        <a href="#" class="yay-toggle">
+          <div class="burg1"></div>
+          <div class="burg2"></div>
+          <div class="burg3"></div>
+        </a>
+        <!-- Sidebar toggle -->
+
+        <!-- Logo -->
+        <a href="#!" class="brand-logo">
+          <img src="assets/_con/images/logo-white.png" alt="Con">
+        </a>
+        <!-- /Logo -->
+      </div>
+    </div>
+
+
+    <div class="nano">
+      <div class="nano-content">
+
+        <ul>
+          <li class="label">Howdy! Jane and John</li>
+          <li>
+            <a href="invite.html" class="waves-effect waves-blue"><i class="fa fa-send"></i> Invite Guests</a>
+          </li>
+          <li>
+            <a href="guestboard.html" class="waves-effect waves-blue"><i class="fa fa-user"></i> Guest Board</a>
+          </li>
+
+          <li>
+            <a href="vendorboard.html" class="waves-effect waves-blue"><i class="mdi mdi-av-web"></i> Vendor Board</a>
+          </li>
+
+          <li>
+            <a class="yay-sub-toggle waves-effect waves-blue"><i class="mdi mdi-image-panorama"></i>Media<span class="yay-collapse-icon mdi-navigation-expand-more"></span></a>
+            <ul>
+              <li><a class="waves-effect waves-blue" href="photogallery.html"><i class="mdi mdi-image-collections"></i> Gallery</a>
+              </li>
+              <li><a class="waves-effect waves-blue" href="video-player.html"><i class="mdi mdi-av-play-circle-outline"></i> Videos</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="mail-inbox.html" class="waves-effect waves-blue"><i class="mdi mdi-av-web"></i> Greetings</a>
+          </li>
+          
+          <li>
+            <a href="songlist.html" class="waves-effect waves-blue"><i class="mdi mdi-av-queue-music"></i> Song Lists</a>
+          </li>
+
+          <li>
+            <a class="yay-sub-toggle waves-effect waves-blue"><i class="fa fa-edit"></i> Edit Invitation<span class="yay-collapse-icon mdi-navigation-expand-more"></span></a>
+            <ul>
+              <li><a class="waves-effect waves-blue" href="css-alerts.html"><i class="mdi-alert-warning"></i> Texts</a>
+              </li>
+              <li><a class="waves-effect waves-blue" href="css-badges.html"><i class="mdi-action-stars"></i> Images</a>
+              </li>
+              <li><a class="waves-effect waves-blue" href="css-colors.html"><i class="mdi-image-palette"></i> Colors</a>
+              </li>
+              <li><a class="waves-effect waves-blue" href="css-grid.html"><i class="mdi-action-dashboard"></i> Fonts</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" target="_blank" class="waves-effect waves-deep-orange"><i class="mdi-image-remove-red-eye"></i>Preview Invitation</a>
+          </li>
+          <li class="label">Stats</li>
+          <li class="content">
+            <span><i class="fa fa-spinner"></i> RSVP's</span>
+            <div class="progress small light-green lighten-4">
+              <div class="light-green accent-5" style="width: 37%"></div>
+            </div>
+
+            <span><i class="fa fa-thumbs-o-up"></i> Likes</span>
+            <div class="progress small">
+              <div style="width: 91%"></div>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </aside>
+  <!-- /Yay Sidebar -->
+
+
+  <!-- Main Content -->
+  <section class="content-wrap">
+   <div class="row">
+      <div class="card-panel">
+      <h4>Vendor List</h4>
+
+      <div class="row">
+        <div class="col s12 l7">
+
+          <table id="table4" class="display table table-bordered table-striped table-hover">
+            <thead>
+              <tr>
+                <th>Vendor</th>
+                <th>Type</th>
+                <th>Office</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Quote</th>
+                <th>Remarks</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Tiger Nixon</td>
+                <td>Photographer</td>
+                <td>Koramangla, Bangalore</td>
+                <td>+91 7823617654</td>
+                <td>tiget@Nixon.com</td>
+                <td>INR 20,000</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Leopard Nixon</td>
+                <td>Banquet</td>
+                <td>Koramangla, Bangalore</td>
+                <td>+91 7823617654</td>
+                <td>leopard@Nixon.com</td>
+                <td>INR 3,00,000</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Cheetah Nixon</td>
+                <td>Caterer</td>
+                <td>Koramangla, Bangalore</td>
+                <td>+91 7823617654</td>
+                <td>cheetah@Nixon.com</td>
+                <td>INR 2,000</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+   </div>
+   </div>
+   </div>
+       <div class="row">
+         <div class="card-panel">
+           <h4>Top Vendors In Your City</h4>
+           <div class="col l4 s12">
+             <div class="card small wow fadeInDown">
+               <div class="card-image wow fadeIn" data-wow-delay="300ms">
+                 <img src="assets/_con/images/image-8.jpg">
+                 <span class="card-title">Card Title</span>
+               </div>
+               <div class="content wow flipInX" data-wow-delay="600ms">
+                 I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.
+               </div>
+               <div class="card-action wow lightSpeedIn" data-wow-delay="800ms">
+                 <a href="#!">This is a link</a>
+               </div>
+             </div>
+           </div>
+           <div class="col l4 s12">
+             <div class="card small wow fadeInDown" data-wow-delay="300ms">
+               <div class="card-image wow fadeIn" data-wow-delay="600ms">
+                 <img src="assets/_con/images/image-6.jpg">
+                 <span class="card-title">Card Title</span>
+               </div>
+               <div class="content wow flipInX" data-wow-delay="900ms">
+                 I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.
+               </div>
+               <div class="card-action wow lightSpeedIn" data-wow-delay="1100ms">
+                 <a href="#!">This is a link</a>
+               </div>
+             </div>
+           </div>
+           <div class="col l4 s12">
+             <div class="card small wow fadeInDown" data-wow-delay="600ms">
+               <div class="card-image wow fadeIn" data-wow-delay="900ms">
+                 <img src="assets/_con/images/image-7.jpg">
+                 <span class="card-title">Card Title</span>
+               </div>
+               <div class="content wow flipInX" data-wow-delay="1200ms">
+                 I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.
+               </div>
+               <div class="card-action wow lightSpeedIn" data-wow-delay="1400ms">
+                 <a href="#!">This is a link</a>
+               </div>
+             </div>
+           </div>
+           <div class="row">
+             <div class="col l4 s12">
+               <div class="card wow fadeInUp" data-wow-delay="600ms">
+                 <figure class="hover-effect effect-duke">
+                   <img src="assets/_con/images/image-6.jpg" alt="image-6">
+                   <figcaption>
+                     <h2>Messy <span>Duke</span></h2>
+                     <p>Duke is very bored. When he looks at the sky, he feels to run.</p>
+                     <a href="#">View more</a>
+                   </figcaption>
+                 </figure>
+               </div>
+             </div>
+             <div class="col l4 s12">
+               <div class="card wow fadeInUp" data-wow-delay="300ms">
+                 <figure class="hover-effect effect-bubba">
+                   <img src="assets/_con/images/image-4.jpg" alt="image-4">
+                   <figcaption>
+                     <h2>Fresh <span>Bubba</span></h2>
+                     <p>Bubba likes to appear out of thin air.</p>
+                     <a href="#">View more</a>
+                   </figcaption>
+                 </figure>
+               </div>
+             </div>
+             <div class="col l4 s12">
+               <div class="card wow fadeInUp">
+                 <figure class="hover-effect effect-sadie">
+                   <img src="assets/_con/images/image-6.jpg" alt="image-6">
+                   <figcaption>
+                     <h2>Holy <span>Sadie</span></h2>
+                     <p>Sadie never took her eyes off me.
+                       <br>She had a dark soul.</p>
+                     <a href="#">View more</a>
+                   </figcaption>
+                 </figure>
+               </div>
+             </div>
+           </div>
+
+           <div class="row">
+             <div class="col l4 s12">
+               <div class="card wow fadeIn">
+                 <div class="title">
+                   <h5 class="wow fadeIn" data-wow-delay="200ms">Title</h5>
+                   <a class="close wow fadeIn" data-wow-delay="600ms" href="#">
+                     <i class="mdi-content-clear"></i>
+                   </a>
+                   <a class="minimize wow fadeIn" data-wow-delay="400ms" href="#">
+                     <i class="mdi-navigation-expand-less"></i>
+                   </a>
+                 </div>
+                 <div class="content wow fadeIn" data-wow-delay="800ms">Content</div>
+               </div>
+             </div>
+             <div class="col l4 s12">
+               <div class="card wow fadeIn" data-wow-delay="300ms">
+                 <div class="title">
+                   <h5 class="wow fadeIn" data-wow-delay="500ms">Title</h5>
+                   <a class="close wow fadeIn" data-wow-delay="900ms" href="#">
+                     <i class="mdi-content-clear"></i>
+                   </a>
+                   <a class="minimize wow fadeIn" data-wow-delay="700ms" href="#">
+                     <i class="mdi-navigation-expand-less"></i>
+                   </a>
+                 </div>
+                 <div class="content wow fadeIn" data-wow-delay="1100ms">Content</div>
+               </div>
+             </div>
+             <div class="col l4 s12">
+               <div class="card wow fadeIn" data-wow-delay="600ms">
+                 <div class="title">
+                   <h5 class="wow fadeIn" data-wow-delay="800ms">Title</h5>
+                   <a class="close wow fadeIn" data-wow-delay="1200ms" href="#">
+                     <i class="mdi-content-clear"></i>
+                   </a>
+                   <a class="minimize wow fadeIn" data-wow-delay="1000ms" href="#">
+                     <i class="mdi-navigation-expand-less"></i>
+                   </a>
+                 </div>
+                 <div class="content wow fadeIn" data-wow-delay="1400ms">Content</div>
+               </div>
+             </div>
+           </div>
+
+           <div class="row">
+               <h4>Popular Vendors</h4>
+             <div class="col l2 m4 s12">
+               <div class="card-panel align-center wow rotateInDownRight">
+                 <i class="fa fa-5x fa-css3 wow rotateIn"></i>
+               </div>
+             </div>
+             <div class="col l2 m4 s12">
+               <div class="card-panel align-center wow rotateInDownRight" data-wow-delay="100ms">
+                 <i class="fa fa-5x fa-child wow rotateIn" data-wow-delay="200ms"></i>
+               </div>
+             </div>
+             <div class="col l2 m4 s12">
+               <div class="card-panel align-center wow rotateInDownRight" data-wow-delay="200ms">
+                 <i class="fa fa-5x fa-cloud wow rotateIn" data-wow-delay="300ms"></i>
+               </div>
+             </div>
+             <div class="col l2 m4 s12">
+               <div class="card-panel align-center wow rotateInDownRight" data-wow-delay="300ms">
+                 <i class="fa fa-5x fa-cogs wow rotateIn" data-wow-delay="400ms"></i>
+               </div>
+             </div>
+             <div class="col l2 m4 s12">
+               <div class="card-panel align-center wow rotateInDownRight" data-wow-delay="400ms">
+                 <i class="fa fa-5x fa-comments-o wow rotateIn" data-wow-delay="500ms"></i>
+               </div>
+             </div>
+             <div class="col l2 m4 s12">
+               <div class="card-panel align-center wow rotateInDownRight" data-wow-delay="500ms">
+                 <i class="fa fa-5x fa-cubes wow rotateIn" data-wow-delay="600ms"></i>
+               </div>
+             </div>
+           </div>
+
+           <div class="row">
+             <div class="col l2 m4 s12">
+               <div class="card-panel align-center wow bounceIn" data-wow-duration="2000ms" data-wow-delay="500ms">
+                 <i class="fa fa-5x fa-futbol-o wow bounceIn" data-wow-duration="2000ms" data-wow-delay="600ms"></i>
+               </div>
+             </div>
+             <div class="col l2 m4 s12">
+               <div class="card-panel align-center wow bounceIn" data-wow-duration="2000ms" data-wow-delay="400ms">
+                 <i class="fa fa-5x fa-graduation-cap wow bounceIn" data-wow-duration="2000ms" data-wow-delay="500ms"></i>
+               </div>
+             </div>
+             <div class="col l2 m4 s12">
+               <div class="card-panel align-center wow bounceIn" data-wow-duration="2000ms" data-wow-delay="300ms">
+                 <i class="fa fa-5x fa-language wow bounceIn" data-wow-duration="2000ms" data-wow-delay="400ms"></i>
+               </div>
+             </div>
+             <div class="col l2 m4 s12">
+               <div class="card-panel lighten-2 align-center wow bounceIn" data-wow-duration="2000ms" data-wow-delay="200ms">
+                 <i class="fa fa-5x fa-microphone wow bounceIn" data-wow-duration="2000ms" data-wow-delay="300ms"></i>
+               </div>
+             </div>
+             <div class="col l2 m4 s12">
+               <div class="card-panel align-center wow bounceIn" data-wow-duration="2000ms" data-wow-delay="100ms">
+                 <i class="fa fa-5x fa-motorcycle wow bounceIn" data-wow-duration="2000ms" data-wow-delay="200ms"></i>
+               </div>
+             </div>
+             <div class="col l2 m4 s12">
+               <div class="card-panel align-center wow bounceIn" data-wow-duration="2000ms">
+                 <i class="fa fa-5x fa-pie-chart wow bounceIn" data-wow-duration="2000ms" data-wow-delay="100ms"></i>
+               </div>
+             </div>
+           </div>
+
+           <div class="row">
+             <div class="col l2 m4 s12">
+               <div class="card-panel align-center wow zoomInUp" data-wow-duration="2000ms">
+                 <i class="fa fa-5x fa-recycle wow jello" data-wow-delay="1000ms"></i>
+               </div>
+             </div>
+             <div class="col l2 m4 s12">
+               <div class="card-panel align-center wow zoomInUp" data-wow-duration="2000ms" data-wow-delay="200ms">
+                 <i class="fa fa-5x fa-send wow jello" data-wow-delay="1300ms"></i>
+               </div>
+             </div>
+             <div class="col l2 m4 s12">
+               <div class="card-panel align-center wow zoomInUp" data-wow-duration="2000ms" data-wow-delay="400ms">
+                 <i class="fa fa-5x fa-sliders wow jello" data-wow-delay="1500ms"></i>
+               </div>
+             </div>
+             <div class="col l2 m4 s12">
+               <div class="card-panel align-center wow zoomInUp" data-wow-duration="2000ms" data-wow-delay="400ms">
+                 <i class="fa fa-5x fa-star-o wow jello" data-wow-delay="1500ms"></i>
+               </div>
+             </div>
+             <div class="col l2 m4 s12">
+               <div class="card-panel align-center wow zoomInUp" data-wow-duration="2000ms" data-wow-delay="200ms">
+                 <i class="fa fa-5x fa-tachometer wow jello" data-wow-delay="1300ms"></i>
+               </div>
+             </div>
+             <div class="col l2 m4 s12">
+               <div class="card-panel align-center wow zoomInUp" data-wow-duration="2000ms">
+                 <i class="fa fa-5x fa-html5 wow jello" data-wow-delay="1000ms"></i>
+               </div>
+             </div>
+           </div>
+
+           <div class="row">
+               <h4>We Recommend</h4>
+             <div class="col l2 m4 s12">
+               <div class="card-panel white-text red lighten-2 align-center wow fadeIn">
+                 <img width="100" src="assets/_con/images/user4.jpg" alt="Patsy Griffin" class="circle photo wow rotateIn" data-wow-delay="100ms">
+               </div>
+             </div>
+             <div class="col l2 m4 s12">
+               <div class="card-panel white-text pink lighten-2 align-center wow fadeIn" data-wow-delay="100ms">
+                 <img width="100" src="assets/_con/images/user.jpg" alt="John Doe" class="circle photo wow rotateIn" data-wow-delay="200ms">
+               </div>
+             </div>
+             <div class="col l2 m4 s12">
+               <div class="card-panel white-text purple lighten-2 align-center wow fadeIn" data-wow-delay="200ms">
+                 <img width="100" src="assets/_con/images/user5.jpg" alt="Chloe Morgan" class="circle photo wow rotateIn" data-wow-delay="300ms">
+               </div>
+             </div>
+             <div class="col l2 m4 s12">
+               <div class="card-panel white-text deep-purple lighten-2 align-center wow fadeIn" data-wow-delay="300ms">
+                 <img width="100" src="assets/_con/images/user3.jpg" alt="Max Brooks" class="circle photo wow rotateIn" data-wow-delay="400ms">
+               </div>
+             </div>
+             <div class="col l2 m4 s12">
+               <div class="card-panel white-text indigo lighten-2 align-center wow fadeIn" data-wow-delay="400ms">
+                 <img width="100" src="assets/_con/images/user6.jpg" alt="Vernon Garrett" class="circle photo wow rotateIn" data-wow-delay="500ms">
+               </div>
+             </div>
+             <div class="col l2 m4 s12">
+               <div class="card-panel white-text blue lighten-2 align-center wow fadeIn" data-wow-delay="500ms">
+                 <img width="100" src="assets/_con/images/user2.jpg" alt="Felicia Castro" class="circle photo wow rotateIn" data-wow-delay="600ms">
+               </div>
+             </div>
+           </div>
+
+           <div class="row">
+             <div class="col l2 m4 s12">
+               <div class="card-panel white-text light-blue lighten-2 align-center wow fadeIn" data-wow-delay="800ms">
+                 <img width="100" src="assets/_con/images/user7.jpg" alt="Greg Mcdonalid" class="circle photo wow rotateIn" data-wow-delay="900ms">
+               </div>
+             </div>
+             <div class="col l2 m4 s12">
+               <div class="card-panel white-text cyan lighten-2 align-center wow fadeIn" data-wow-delay="700ms">
+                 <img width="100" src="assets/_con/images/user8.jpg" alt="Christian Jackson" class="circle photo wow rotateIn" data-wow-delay="800ms">
+               </div>
+             </div>
+             <div class="col l2 m4 s12">
+               <div class="card-panel white-text teal lighten-2 align-center wow fadeIn" data-wow-delay="600ms">
+                 <img width="100" src="assets/_con/images/user9.jpg" alt="Willier Kelly" class="circle photo wow rotateIn" data-wow-delay="700ms">
+               </div>
+             </div>
+             <div class="col l2 m4 s12">
+               <div class="card-panel white-text green lighten-2 align-center wow fadeIn" data-wow-delay="500ms">
+                 <img width="100" src="assets/_con/images/user10.jpg" alt="Jenny Philips" class="circle photo wow rotateIn" data-wow-delay="600ms">
+               </div>
+             </div>
+             <div class="col l2 m4 s12">
+               <div class="card-panel white-text light-green lighten-2 align-center wow fadeIn" data-wow-delay="400ms">
+                 <img width="100" src="assets/_con/images/user11.jpg" alt="Darren Cunningham" class="circle photo wow rotateIn" data-wow-delay="500ms">
+               </div>
+             </div>
+             <div class="col l2 m4 s12">
+               <div class="card-panel white-text lime lighten-2 align-center wow fadeIn" data-wow-delay="300ms">
+                 <img width="100" src="assets/_con/images/user12.jpg" alt="Sandra Cole" class="circle photo wow rotateIn" data-wow-delay="400ms">
+               </div>
+             </div>
+           </div>
+
+           <div class="row">
+             <div class="col l6 m10 s12 offset-l3 offset-m1">
+               <div class="card-panel align-center wow fadeIn">
+                 <h3 class="photo wow pulse" data-wow-iteration="infinite"><!--<img src="assets/_con/images/logo1.png" alt="Con Admin" class="photo wow pulse" data-wow-iteration="infinite">-->
+                     <a href="">Ask us for a quote.</a></h3>
+               </div>
+             </div>
+           </div>
+         </div>
+         </div>
+  </section>
+  <!-- /Main Content -->
+
+    <!-- Search Bar -->
+  <div class="search-bar">
+    <div class="layer-overlay"></div>
+    <div class="layer-content">
+      <form action="#!">
+        <!-- Header -->
+        <a class="search-bar-toggle grey-text text-darken-2" href="#!"><i class="mdi-navigation-close"></i></a>
+
+        <!-- Search Input -->
+        <div class="input-field">
+          <i class="mdi-action-search prefix"></i>
+          <input type="text" name="con-search" placeholder="Search...">
+        </div>
+
+        <!-- Search Results -->
+        <div class="search-results">
+
+          <div class="row">
+            <div class="col s12 l4">
+              <h4>Top Vendors</h4>
+
+              <div class="each-result">
+                <img src="assets/_con/images/user2.jpg" alt="Felecia Castro" class="circle photo">
+                <div class="title">Felecia Castro</div>
+                <div class="label">Event Manager</div>
+              </div>
+
+              <div class="each-result">
+                <img src="assets/_con/images/user3.jpg" alt="Max Brooks" class="circle photo">
+                <div class="title">Max Brooks</div>
+                <div class="label">Photographer</div>
+              </div>
+
+              <div class="each-result">
+                <img src="assets/_con/images/user4.jpg" alt="Patsy Griffin" class="circle photo">
+                <div class="title">Patsy Griffin</div>
+                <div class="label">Caterer and Florals</div>
+              </div>
+
+              <div class="each-result">
+                <img src="assets/_con/images/user6.jpg" alt="Vernon Garrett" class="circle photo">
+                <div class="title">Vernon Garrett</div>
+                <div class="label">Banquets</div>
+              </div>
+            </div>
+            <div class="col s12 l4">
+              <h4>More Vendors</h4>
+
+              <div class="each-result">
+                <div class="icon circle blue white-text">MD</div>
+                <div class="title">Vernon Garrett</div>
+                <div class="label nowrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi consequatur debitis veritatis dolorum, enim libero!</div>
+              </div>
+
+              <div class="each-result">
+                <div class="icon circle teal white-text">
+                  <i class="fa fa-dashboard"></i>
+                </div>
+                <div class="title">Marriage Inc.</div>
+                <div class="label nowrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi consequatur debitis veritatis dolorum, enim libero!</div>
+              </div>
+
+              <div class="each-result">
+                <div class="icon circle orange white-text">RD</div>
+                <div class="title">Photos Inc.</div>
+                <div class="label nowrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi consequatur debitis veritatis dolorum, enim libero!</div>
+              </div>
+
+              <div class="each-result">
+                <div class="icon circle red white-text">
+                  <i class="fa fa-tablet"></i>
+                </div>
+                <div class="title">Banquets Inc.</div>
+                <div class="label nowrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi consequatur debitis veritatis dolorum, enim libero!</div>
+              </div>
+            </div>
+            <div class="col s12 l4">
+              <h4>Guests</h4>
+
+              <div class="no-result">No results were found ;(</div>
+            </div>
+          </div>
+
+        </div>
+
+      </form>
+    </div>
+  </div>
+  <!-- /Search Bar -->
+
+
+
+
+  <footer>&copy; 2015 <strong>nK</strong>. All rights reserved. <a href="http://deepakpathak.in/urinvitd">URINVITD</a>
+  </footer>
+  <!-- DEMO [REMOVE IT ON PRODUCTION] -->
+  <script type="text/javascript" src="assets/_con/js/_demo.js"></script>
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="assets/jquery/jquery.min.js"></script>
+
+  <!-- jQuery RAF (improved animation performance) -->
+  <script type="text/javascript" src="assets/jqueryRAF/jquery.requestAnimationFrame.min.js"></script>
+
+  <!-- nanoScroller -->
+  <script type="text/javascript" src="assets/nanoScroller/jquery.nanoscroller.min.js"></script>
+
+  <!-- Materialize -->
+  <script type="text/javascript" src="assets/materialize/js/materialize.min.js"></script>
+
+
+  <!-- Simple Weather -->
+  <script type="text/javascript" src="assets/simpleWeather/jquery.simpleWeather.min.js"></script>
+
+  <!-- d3 -->
+  <script type="text/javascript" src="assets/d3/d3.min.js"></script>
+
+  <!-- nvd3 -->
+  <script type="text/javascript" src="assets/nvd3/nv.d3.min.js"></script>
+    <!-- Data Tables -->
+  <script type="text/javascript" src="assets/dataTables/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="assets/dataTables/extensions/TableTools/js/dataTables.tableTools.min.js"></script>
+  <script type="text/javascript" src="assets/dataTables/extensions/Scroller/js/dataTables.scroller.min.js"></script>
+    <!-- WOW.js -->
+  <script type="text/javascript" src="assets/wow.js/wow.min.js"></script>
+  <!-- Sortable -->
+  <script type="text/javascript" src="assets/sortable/Sortable.min.js"></script>
+
+  <!-- Main -->
+  <script type="text/javascript" src="assets/_con/js/_con.min.js"></script>
+
+
+  <!-- Google Prettify -->
+  <script type="text/javascript" src="assets/google-code-prettify/prettify.js"></script>
+  <script>
+/*    $('#table4').DataTable({
+      "iDisplayLength": 5,
+      "bLengthChange": false,
+      "filter": false,
+      "dom": 'Tlfrtip',
+      "aLengthMenu": [
+        [5, 10, 25, 50, -1],
+        [5, 10, 25, 50, "all"]
+      ],
+      "tableTools": {
+        "sSwfPath": "assets/dataTables/extensions/TableTools/swf/copy_csv_xls_pdf.swf"
+      }
+    });*/
+        /*
+     * DataTable with Search
+     */
+    $('#table4').DataTable({
+      "iDisplayLength": 5,
+      "aLengthMenu": [
+        [5, 10, 25, 50, -1],
+        [5, 10, 25, 50, "all"]
+      ], 
+      "dom": 'Tlfrtip',
+      "tableTools": {
+        "sSwfPath": "assets/dataTables/extensions/TableTools/swf/copy_csv_xls_pdf.swf"
+      }
+    });
+  </script>
+</body>
+
+</html>
