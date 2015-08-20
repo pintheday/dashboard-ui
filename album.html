@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>  <html class="lt-ie7"> <![endif]-->
+<!--[if IE 7]>     <html class="lt-ie8"> <![endif]-->
+<!--[if IE 8]>     <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>URINVITD Dashboard</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+
+    <link rel="icon" type="image/png" href="assets/_con/images/icon.png">
+
+    <!-- nanoScroller -->
+    <link rel="stylesheet" type="text/css" href="assets/nanoScroller/nanoscroller.css" />
+
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.min.css" />
+
+    <!-- Material Design Icons -->
+    <link rel="stylesheet" type="text/css" href="assets/material-design-icons/css/material-design-icons.min.css" />
+
+    <!-- IonIcons -->
+    <link rel="stylesheet" type="text/css" href="assets/ionicons/css/ionicons.min.css" />
+    <link href="assets/album/css/Icomoon/style.css" rel="stylesheet" type="text/css" />
+    <!-- WeatherIcons -->
+    <link rel="stylesheet" type="text/css" href="assets/weatherIcons/css/weather-icons.min.css" />
+    <!--masonry tiles-->
+    <link rel="stylesheet" type="text/css" href="assets/album/css/animated-masonry-gallery.css"/>
+    <!-- PhotoSwipe -->
+    <link rel="stylesheet" type="text/css" href="assets/PhotoSwipe/photoswipe.css" />
+    <link rel="stylesheet" type="text/css" href="assets/PhotoSwipe/default-skin/default-skin.css" />
+    <!-- Main -->
+    <link rel="stylesheet" type="text/css" href="assets/_con/css/_con.min.css" />
+
+    <!--[if lt IE 9]>
+    <script src="assets/html5shiv/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+
+<!--
+Top Navbar
+  Options:
+    .navbar-dark - dark color scheme
+    .navbar-static - static navbar
+    .navbar-under - under sidebar
+-->
+<nav class="navbar-top">
+    <div class="nav-wrapper">
+
+        <!-- Sidebar toggle -->
+        <a href="#" class="yay-toggle">
+            <div class="burg1"></div>
+            <div class="burg2"></div>
+            <div class="burg3"></div>
+        </a>
+        <!-- Sidebar toggle -->
+
+        <!-- Logo -->
+        <a href="index.html" class="brand-logo">
+            <img src="assets/_con/images/logo1.png" alt="Con">
+        </a>
+        <!-- /Logo -->
+
+        <!-- Menu -->
+        <ul>
+            <li><a href="#!" class="search-bar-toggle"><i class="mdi-action-search"></i></a>
+            </li>
+            <li class="user">
+                <a class="dropdown-button" href="#!" data-activates="user-dropdown">
+                    <img src="assets/_con/images/user.jpg" alt="John Doe" class="circle">Jane and John<i class="mdi-navigation-expand-more right"></i>
+                </a>
+
+                <ul id="user-dropdown" class="dropdown-content">
+                    <li><a href="profile.html"><i class="fa fa-user"></i> Profile</a>
+                    </li>
+                    <li><a href="mail-inbox.html"><i class="fa fa-envelope"></i> Messages <span class="badge new">2</span></a>
+                        <!--            </li>
+                                    <li><a href="#!"><i class="fa fa-cogs"></i> Settings</a>
+                                    </li>-->
+                    <li class="divider"></li>
+                    <li><a href="sign-in.html"><i class="fa fa-sign-out"></i> Logout</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <!-- /Menu -->
+
+    </div>
+</nav>
+<!-- /Top Navbar -->
+
+
+<!--
+Yay Sidebar
+-->
+<aside class="yaybar yay-shrink yay-hide-to-small yay-gestures">
+
+    <div class="top">
+        <div>
+            <!-- Sidebar toggle -->
+            <a href="#!" class="yay-toggle">
+                <div class="burg1"></div>
+                <div class="burg2"></div>
+                <div class="burg3"></div>
+            </a>
+            <!-- Sidebar toggle -->
+
+            <!-- Logo -->
+            <a href="index.html" class="brand-logo">
+                <img src="assets/_con/images/logo-white.png" alt="Con">
+            </a>
+            <!-- /Logo -->
+        </div>
+    </div>
+
+
+    <div class="nano">
+        <div class="nano-content">
+
+            <ul>
+                <li class="label">Howdy! Jane and John</li>
+                <li>
+                    <a href="invite.html" class="waves-effect waves-blue"><i class="fa fa-send"></i> Invite Guests</a>
+                </li>
+                <li>
+                    <a href="guestboard.html" class="waves-effect waves-blue"><i class="fa fa-user"></i> Guest Board</a>
+                </li>
+
+                <li>
+                    <a href="vendorboard.html" class="waves-effect waves-blue"><i class="mdi mdi-av-web"></i> Vendor Board</a>
+                </li>
+
+                <li>
+                    <a class="yay-sub-toggle waves-effect waves-blue"><i class="mdi mdi-image-panorama"></i>Media<span class="yay-collapse-icon mdi-navigation-expand-more"></span></a>
+                    <ul>
+                        <li><a class="waves-effect waves-blue" href="photogallery.html"><i class="mdi mdi-image-collections"></i> Gallery</a>
+                        </li>
+                        <li><a class="waves-effect waves-blue" href="video-player.html"><i class="mdi mdi-av-play-circle-outline"></i> Videos</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="mail-inbox.html" class="waves-effect waves-blue"><i class="mdi mdi-av-web"></i> Greetings</a>
+                </li>
+
+                <li>
+                    <a href="songlist.html" class="waves-effect waves-blue"><i class="mdi mdi-av-queue-music"></i> Song Lists</a>
+                </li>
+
+                <li>
+                    <a href="album.html" class="waves-effect waves-blue"><i class="mdi mdi-image-collections"></i> Wedding Album</a>
+                </li>
+                <li>
+                    <a class="yay-sub-toggle waves-effect waves-blue"><i class="fa fa-edit"></i> Edit Invitation<span class="yay-collapse-icon mdi-navigation-expand-more"></span></a>
+                    <ul>
+                        <li><a class="waves-effect waves-blue" href="css-alerts.html"><i class="mdi-alert-warning"></i> Texts</a>
+                        </li>
+                        <li><a class="waves-effect waves-blue" href="css-badges.html"><i class="mdi-action-stars"></i> Images</a>
+                        </li>
+                        <li><a class="waves-effect waves-blue" href="css-colors.html"><i class="mdi-image-palette"></i> Colors</a>
+                        </li>
+                        <li><a class="waves-effect waves-blue" href="css-grid.html"><i class="mdi-action-dashboard"></i> Fonts</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="label">Stats</li>
+                <li class="content">
+                    <span><i class="fa fa-spinner"></i> RSVP's</span>
+                    <div class="progress small light-green lighten-4">
+                        <div class="light-green accent-5" style="width: 37%"></div>
+                    </div>
+
+                    <span><i class="fa fa-thumbs-o-up"></i> Likes</span>
+                    <div class="progress small">
+                        <div style="width: 91%"></div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</aside>
+<!-- /Yay Sidebar -->
+
+
+<!-- Main Content -->
+<section class="content-wrap">
+    <div class="card-panel">
+        <div id="gallery">
+            <div id="gallery-header">
+                <div id="gallery-header-center">
+                    <div id="gallery-header-center-left">
+                        <div id="gallery-header-center-left-icon"><i class="fa fa-expand"></i></span></div>
+                        <div id="gallery-header-center-left-title">All Galleries</div>
+                    </div>
+                    <div id="gallery-header-center-right">
+                        <div class="gallery-header-center-right-links" id="filter-all">All</div>
+                        <div class="gallery-header-center-right-links" id="filter-studio">Enagagement</div>
+                        <div class="gallery-header-center-right-links" id="filter-landscape">Marriage</div>
+                    </div>
+                </div>
+            </div>
+            <div id="gallery-content">
+                <div id="gallery-content-center" class="photoswipe-gallery isotope mt-0">
+                    <a href="assets/album/images/studio1.jpg" class="studio"><img src="assets/album/images/studio1.jpg" class="all studio"/></a>
+                    <a href="assets/album/images/landscape1.jpg" class="landscape"><img src="assets/album/images/landscape1.jpg" class="all landscape"></a>
+                    <a href="assets/album/images/studio2.jpg" class="studio"><img src="assets/album/images/studio2.jpg" class="all studio"/></a>
+                    <a href="assets/album/images/landscape2.jpg" class="landscape"><img src="assets/album/images/landscape2.jpg" class="all landscape"></a>
+                    <a href="assets/album/images/landscape4.jpg" class="landscape"><img src="assets/album/images/landscape4.jpg" class="all landscape"></a>
+                    <a href="assets/album/images/landscape5.jpg" class="landscape"><img src="assets/album/images/landscape5.jpg" class="all landscape"></a>
+                    <!--<img src="assets/album/images/studio1.jpg" class="all studio"/>
+                    <img src="assets/album/images/landscape1.jpg" class="all landscape">
+                    <img src="assets/album/images/studio2.jpg" class="all studio"/>
+                    <img src="assets/album/images/studio25.jpg" class="all studio"/>
+                    <img src="assets/album/images/landscape2.jpg" class="all landscape">
+                    <img src="assets/album/images/studio27.jpg" class="all studio"/>
+                    <img src="assets/album/images/studio3.jpg" class="all studio"/>
+                    <img src="assets/album/images/landscape3.jpg" class="all landscape">
+                    <img src="assets/album/images/studio26.jpg" class="all studio"/>
+                    <img src="assets/album/images/studio4.jpg" class="all studio"/>
+                    <img src="assets/album/images/landscape4.jpg" class="all landscape">
+                    <img src="assets/album/images/studio5.jpg" class="all studio"/>
+                    <img src="assets/album/images/landscape5.jpg" class="all landscape">
+                    <img src="assets/album/images/studio6.jpg" class="all studio"/>
+                    <img src="assets/album/images/landscape6.jpg" class="all landscape">
+                    <img src="assets/album/images/studio7.jpg" class="all studio"/>
+                    <img src="assets/album/images/landscape7.jpg" class="all landscape">
+                    <img src="assets/album/images/studio8.jpg" class="all studio"/>
+                    <img src="assets/album/images/landscape8.jpg" class="all landscape">
+                    <img src="assets/album/images/studio9.jpg" class="all studio"/>
+                    <img src="assets/album/images/landscape9.jpg" class="all landscape">
+                    <img src="assets/album/images/studio10.jpg" class="all studio"/>
+                    <img src="assets/album/images/landscape10.jpg" class="all landscape">
+                    <img src="assets/album/images/studio11.jpg" class="all studio"/>
+                    <img src="assets/album/images/landscape11.jpg" class="all landscape">
+                    <img src="assets/album/images/studio12.jpg" class="all studio"/>
+                    <img src="assets/album/images/landscape12.jpg" class="all landscape">
+                    <img src="assets/album/images/studio13.jpg" class="all studio"/>
+                    <img src="assets/album/images/landscape13.jpg" class="all landscape">
+                    <img src="assets/album/images/studio14.jpg" class="all studio"/>
+                    <img src="assets/album/images/landscape14.jpg" class="all landscape">
+                    <img src="assets/album/images/studio15.jpg" class="all studio"/>
+                    <img src="assets/album/images/landscape15.jpg" class="all landscape">
+                    <img src="assets/album/images/studio16.jpg" class="all studio"/>
+                    <img src="assets/album/images/landscape16.jpg" class="all landscape">
+                    <img src="assets/album/images/studio17.jpg" class="all studio"/>
+                    <img src="assets/album/images/landscape17.jpg" class="all landscape">
+                    <img src="assets/album/images/studio18.jpg" class="all studio"/>
+                    <img src="assets/album/images/landscape18.jpg" class="all landscape">
+                    <img src="assets/album/images/studio19.jpg" class="all studio"/>
+                    <img src="assets/album/images/studio20.jpg" class="all studio"/>
+                    <img src="assets/album/images/studio21.jpg" class="all studio"/>
+                    <img src="assets/album/images/studio22.jpg" class="all studio"/>
+                    <img src="assets/album/images/studio23.jpg" class="all studio"/>
+                    <img src="assets/album/images/studio24.jpg" class="all studio"/>-->
+
+                </div>
+</div>
+        </div>
+    </div>
+    </div>
+</section>
+<!-- /Main Content -->
+
+<!-- Search Bar -->
+<div class="search-bar">
+    <div class="layer-overlay"></div>
+    <div class="layer-content">
+        <form action="#!">
+            <!-- Header -->
+            <a class="search-bar-toggle grey-text text-darken-2" href="#!"><i class="mdi-navigation-close"></i></a>
+
+            <!-- Search Input -->
+            <div class="input-field">
+                <i class="mdi-action-search prefix"></i>
+                <input type="text" name="con-search" placeholder="Search...">
+            </div>
+
+            <!-- Search Results -->
+            <div class="search-results">
+
+                <div class="row">
+                    <div class="col s12 l4">
+                        <h4>Users</h4>
+
+                        <div class="each-result">
+                            <img src="assets/_con/images/user2.jpg" alt="Felecia Castro" class="circle photo">
+                            <div class="title">Felecia Castro</div>
+                            <div class="label">Content Manager</div>
+                        </div>
+
+                        <div class="each-result">
+                            <img src="assets/_con/images/user3.jpg" alt="Max Brooks" class="circle photo">
+                            <div class="title">Max Brooks</div>
+                            <div class="label">Programmer</div>
+                        </div>
+
+                        <div class="each-result">
+                            <img src="assets/_con/images/user4.jpg" alt="Patsy Griffin" class="circle photo">
+                            <div class="title">Patsy Griffin</div>
+                            <div class="label">Support</div>
+                        </div>
+
+                        <div class="each-result">
+                            <img src="assets/_con/images/user6.jpg" alt="Vernon Garrett" class="circle photo">
+                            <div class="title">Vernon Garrett</div>
+                            <div class="label">Photographer</div>
+                        </div>
+                    </div>
+                    <div class="col s12 l4">
+                        <h4>Articles</h4>
+
+                        <div class="each-result">
+                            <div class="icon circle blue white-text">MD</div>
+                            <div class="title">Material Design</div>
+                            <div class="label nowrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi consequatur debitis veritatis dolorum, enim libero!</div>
+                        </div>
+
+                        <div class="each-result">
+                            <div class="icon circle teal white-text">
+                                <i class="fa fa-dashboard"></i>
+                            </div>
+                            <div class="title">Admin Dashboard</div>
+                            <div class="label nowrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi consequatur debitis veritatis dolorum, enim libero!</div>
+                        </div>
+
+                        <div class="each-result">
+                            <div class="icon circle orange white-text">RD</div>
+                            <div class="title">Responsive Design</div>
+                            <div class="label nowrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi consequatur debitis veritatis dolorum, enim libero!</div>
+                        </div>
+
+                        <div class="each-result">
+                            <div class="icon circle red white-text">
+                                <i class="fa fa-tablet"></i>
+                            </div>
+                            <div class="title">Mobile First</div>
+                            <div class="label nowrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi consequatur debitis veritatis dolorum, enim libero!</div>
+                        </div>
+                    </div>
+                    <div class="col s12 l4">
+                        <h4>Posts</h4>
+
+                        <div class="no-result">No results were found ;(</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+</div>
+<!-- /Search Bar -->
+
+
+
+
+<footer>&copy; 2015 <strong>URINVITD</strong>. All rights reserved. <a href="http://deepakpathak.in/urinvitd">URINVITD</a>
+</footer>
+<!-- DEMO [REMOVE IT ON PRODUCTION] -->
+<script type="text/javascript" src="assets/_con/js/_demo.js"></script>
+
+<!-- jQuery -->
+<script type="text/javascript" src="assets/jquery/jquery.min.js"></script>
+
+<!-- jQuery RAF (improved animation performance) -->
+<script type="text/javascript" src="assets/jqueryRAF/jquery.requestAnimationFrame.min.js"></script>
+
+<!-- nanoScroller -->
+<script type="text/javascript" src="assets/nanoScroller/jquery.nanoscroller.min.js"></script>
+
+<!-- Materialize -->
+<script type="text/javascript" src="assets/materialize/js/materialize.min.js"></script>
+<!-- PhotoSwipe -->
+<script type="text/javascript" src="assets/PhotoSwipe/photoswipe.min.js"></script>
+<script type="text/javascript" src="assets/PhotoSwipe/photoswipe-ui-default.min.js"></script>
+
+<!-- Isotope -->
+<script type="text/javascript" src="assets/isotope/isotope.pkgd.min.js"></script>
+<!-- Sortable -->
+<script type="text/javascript" src="assets/sortable/Sortable.min.js"></script>
+<!--Masonry tiles-->
+<script type="text/javascript" src="assets/album/scripts/animated-masonry-gallery.js"></script>
+<!-- Main -->
+<script type="text/javascript" src="assets/_con/js/_con.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>  <html class="lt-ie7"> <![endif]-->
+<!--[if IE 7]>     <html class="lt-ie8"> <![endif]-->
+<!--[if IE 8]>     <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>URINVITD Dashboard</title>
+
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+
+  <link rel="icon" type="image/png" href="assets/_con/images/icon.png">
+
+  <!-- nanoScroller -->
+  <link rel="stylesheet" type="text/css" href="assets/nanoScroller/nanoscroller.css" />
+
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.min.css" />
+
+  <!-- Material Design Icons -->
+  <link rel="stylesheet" type="text/css" href="assets/material-design-icons/css/material-design-icons.min.css" />
+
+  <!-- IonIcons -->
+  <link rel="stylesheet" type="text/css" href="assets/ionicons/css/ionicons.min.css" />
+
+  <!-- WeatherIcons -->
+  <link rel="stylesheet" type="text/css" href="assets/weatherIcons/css/weather-icons.min.css" />
+
+  <!-- Google Prettify -->
+  <link rel="stylesheet" type="text/css" href="assets/google-code-prettify/prettify.css" />
+  <!-- Main -->
+  <link rel="stylesheet" type="text/css" href="assets/_con/css/_con.min.css" />
+
+  <!--[if lt IE 9]>
+    <script src="assets/html5shiv/html5shiv.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+<!-- Floating action button -->
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+  <a class="btn-floating btn-extra red">
+    <i class="large mdi-editor-mode-edit"></i>
+  </a>
+  <ul>
+    <li><a class="btn-floating red tooltipped" data-position="left" data-delay="50" data-tooltip="Create New Invitation"><i class="large mdi-content-add"></i></a></li>
+    <li><a class="btn-floating blue darken-1 tooltipped" data-position="left" data-delay="50" data-tooltip="Preview This Invitation"><i class="large mdi-image-remove-red-eye"></i></a></li>
+  </ul>
+</div>
+<!-- Floating action button ends-->
+
+<!--
+Top Navbar
+  Options:
+    .navbar-dark - dark color scheme
+    .navbar-static - static navbar
+    .navbar-under - under sidebar
+-->
+<nav class="navbar-top">
+  <div class="nav-wrapper">
+
+    <!-- Sidebar toggle -->
+    <a href="#" class="yay-toggle">
+      <div class="burg1"></div>
+      <div class="burg2"></div>
+      <div class="burg3"></div>
+    </a>
+    <!-- Sidebar toggle -->
+
+    <!-- Logo -->
+    <a href="index.html" class="brand-logo">
+      <img src="assets/_con/images/logo1.png" alt="Con">
+    </a>
+    <!-- /Logo -->
+
+    <!-- Menu -->
+    <ul>
+      <li><a href="#!" class="search-bar-toggle"><i class="mdi-action-search"></i></a>
+      </li>
+      <li class="user">
+        <a class="dropdown-button" href="#!" data-activates="user-dropdown">
+          <img src="assets/_con/images/user.jpg" alt="John Doe" class="circle">Jane and John<i class="mdi-navigation-expand-more right"></i>
+        </a>
+
+        <ul id="user-dropdown" class="dropdown-content">
+          <li><a href="profile.html"><i class="fa fa-user"></i> Profile</a>
+          </li>
+          <li><a href="mail-inbox.html"><i class="fa fa-envelope"></i> Messages <span class="badge new">2</span></a>
+            <!--            </li>
+                        <li><a href="#!"><i class="fa fa-cogs"></i> Settings</a>
+                        </li>-->
+          <li class="divider"></li>
+          <li><a href="sign-in.html"><i class="fa fa-sign-out"></i> Logout</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <!-- /Menu -->
+
+  </div>
+</nav>
+<!-- /Top Navbar -->
+
+
+<!--
+Yay Sidebar
+-->
+<aside class="yaybar yay-shrink yay-hide-to-small yay-gestures">
+
+  <div class="top">
+    <div>
+      <!-- Sidebar toggle -->
+      <a href="#" class="yay-toggle">
+        <div class="burg1"></div>
+        <div class="burg2"></div>
+        <div class="burg3"></div>
+      </a>
+      <!-- Sidebar toggle -->
+
+      <!-- Logo -->
+      <a href="index.html" class="brand-logo">
+        <img src="assets/_con/images/logo1.png" alt="Con">
+      </a>
+      <!-- /Logo -->
+    </div>
+  </div>
+
+
+  <div class="nano">
+    <div class="nano-content">
+
+      <ul>
+        <li class="label">Howdy! Jane and John</li>
+        <li>
+          <a href="invite.html" class="waves-effect waves-blue"><i class="fa fa-send"></i> Invite Guests</a>
+        </li>
+        <li>
+          <a href="guestboard.html" class="waves-effect waves-blue"><i class="fa fa-user"></i> Guest Board</a>
+        </li>
+
+        <li>
+          <a href="vendorboard.html" class="waves-effect waves-blue"><i class="mdi mdi-av-web"></i> Vendor Board</a>
+        </li>
+
+        <li>
+          <a class="yay-sub-toggle waves-effect waves-blue"><i class="mdi mdi-image-panorama"></i>Media<span class="yay-collapse-icon mdi-navigation-expand-more"></span></a>
+          <ul>
+            <li><a class="waves-effect waves-blue" href="photogallery.html"><i class="mdi mdi-image-collections"></i> Gallery</a>
+            </li>
+            <li><a class="waves-effect waves-blue" href="video-player.html"><i class="mdi mdi-av-play-circle-outline"></i> Videos</a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="mail-inbox.html" class="waves-effect waves-blue"><i class="mdi mdi-av-web"></i> Greetings</a>
+        </li>
+
+        <li>
+          <a href="songlist.html" class="waves-effect waves-blue"><i class="mdi mdi-av-queue-music"></i> Song Lists</a>
+        </li>
+        <li>
+          <a class="yay-sub-toggle waves-effect waves-blue"><i class="fa fa-edit"></i> Edit Invitation<span class="yay-collapse-icon mdi-navigation-expand-more"></span></a>
+          <ul>
+            <li><a class="waves-effect waves-blue" href="css-alerts.html"><i class="mdi-alert-warning"></i> Texts</a>
+            </li>
+            <li><a class="waves-effect waves-blue" href="css-badges.html"><i class="mdi-action-stars"></i> Images</a>
+            </li>
+            <li><a class="waves-effect waves-blue" href="css-colors.html"><i class="mdi-image-palette"></i> Colors</a>
+            </li>
+            <li><a class="waves-effect waves-blue" href="css-grid.html"><i class="mdi-action-dashboard"></i> Fonts</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" target="_blank" class="waves-effect waves-deep-orange"><i class="mdi-image-remove-red-eye"></i>Preview Invitation</a>
+        </li>
+        <li class="label">Stats</li>
+        <li class="content">
+          <span><i class="fa fa-spinner"></i> RSVP's</span>
+          <div class="progress small light-green lighten-4">
+            <div class="light-green accent-5" style="width: 37%"></div>
+          </div>
+
+          <span><i class="fa fa-thumbs-o-up"></i> Likes</span>
+          <div class="progress small">
+            <div style="width: 91%"></div>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</aside>
+<!-- /Yay Sidebar -->
+
+
+<!--  <a class="mail-compose-btn btn-floating btn-extra waves-effect waves-light red tooltipped" href="mail-compose.html" data-tooltip="Compose" data-position="left">
+    <i class="mdi-content-add"></i>
+  </a>-->
+
+  <!-- Main Content -->
+  <section class="content-wrap mail-inbox">
+
+    <div class="card-panel orange lighten-4">
+      <form action="#!">
+        <div class="input-field mail-search">
+          <i class="mdi-action-search prefix"></i>
+          <input id="mail_search" type="text" name="mail_search">
+          <label for="mail_search">Search Massage</label>
+          <!--a class="btn">Search</a-->
+        </div>
+      </form>
+    </div>
+
+    <div class="row">
+   <!--   <div class="col s12 m3 l2">
+        <div class="card-panel indigo lighten-5">
+
+          &lt;!&ndash; Mail Sidebar &ndash;&gt;
+          <ul class="mail-sidebar">
+            <li class="active">
+              <a href="mail-inbox.html"><i class="mdi-content-inbox"></i> Inbox</a>
+            </li>
+            <li>
+              <a href="mail-inbox.html"><i class="mdi-action-done"></i> Done</a>
+            </li>
+
+
+            <li>
+              <hr>
+            </li>
+
+            <li>
+              <a href="mail-inbox.html"><i class="mdi-content-send"></i> Sent</a>
+            </li>
+            <li>
+              <a href="mail-inbox.html"><i class="mdi-action-delete"></i> Trash</a>
+            </li>
+            <li>
+              <a href="mail-inbox.html"><i class="mdi-content-report"></i> Spam</a>
+            </li>
+
+
+            <li>
+              <hr>
+            </li>
+          </ul>
+          &lt;!&ndash; /Mail Sidebar &ndash;&gt;
+
+        </div>
+      </div>-->
+      <div class="col s12 m12 l12">
+        <div class="card-panel green lighten-5">
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <tbody>
+                <tr class="read">
+                  <th class="mail-check">
+                    <input type="checkbox" id="checkbox1" />
+                    <label for="checkbox1"></label>
+                  </th>
+                  <td class="mail-contact">
+                    <a href="mail-view.html">Isobel Murphy</a>
+                  </td>
+                  <td class="mail-subject">
+                    <a href="mail-view.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+                  </td>
+                  <td class="mail-date">3:12 PM</td>
+                </tr>
+
+                <tr class="unread">
+                  <th class="mail-check">
+                    <input type="checkbox" id="checkbox2" />
+                    <label for="checkbox2"></label>
+                  </th>
+                  <td class="mail-contact">
+                    <a href="mail-view.html">Dianne Chambers</a>
+                  </td>
+                  <td class="mail-subject">
+                    <a href="mail-view.html">Ut feugiat tempus felis, sit amet mattis dolor accumsan quis. Aenean pharetra tempus justo, vitae euismod ipsum congue a.</a>
+                  </td>
+                  <td class="mail-date">9:02 AM</td>
+                </tr>
+
+                <tr class="unread">
+                  <th class="mail-check">
+                    <input type="checkbox" id="checkbox3" />
+                    <label for="checkbox3"></label>
+                  </th>
+                  <td class="mail-contact">
+                    <a href="mail-view.html">Joanne Stephens</a>
+                  </td>
+                  <td class="mail-subject">
+                    <a href="mail-view.html">Proin suscipit lobortis porta. Interdum et malesuada fames ac ante ipsum primis in faucibus.</a>
+                  </td>
+                  <td class="mail-date">Dec 19</td>
+                </tr>
+
+                <tr class="read">
+                  <th class="mail-check">
+                    <input type="checkbox" id="checkbox4" checked />
+                    <label for="checkbox4"></label>
+                  </th>
+                  <td class="mail-contact">
+                    <a href="mail-view.html">Ethan Baker</a>
+                  </td>
+                  <td class="mail-subject">
+                    <a href="mail-view.html">Pellentesque vitae vulputate dolor, vitae aliquet elit. Sed est felis, pretium ac lacus vitae, vestibulum lacinia ante.</a>
+                  </td>
+                  <td class="mail-date">Feb 3</td>
+                </tr>
+
+                <tr class="read">
+                  <th class="mail-check">
+                    <input type="checkbox" id="checkbox5" checked />
+                    <label for="checkbox5"></label>
+                  </th>
+                  <td class="mail-contact">
+                    <a href="mail-view.html">Gilbert Hughes</a>
+                  </td>
+                  <td class="mail-subject">
+                    <a href="mail-view.html">Vivamus scelerisque egestas nisi nec posuere.</a>
+                  </td>
+                  <td class="mail-date">January 27</td>
+                </tr>
+
+                <tr class="read">
+                  <th class="mail-check">
+                    <input type="checkbox" id="checkbox6" />
+                    <label for="checkbox6"></label>
+                  </th>
+                  <td class="mail-contact">
+                    <a href="mail-view.html">Liam Hudson</a>
+                  </td>
+                  <td class="mail-subject">
+                    <a href="mail-view.html">Donec quis semper ligula. Etiam vel ex mollis tellus posuere fringilla et id augue.</a>
+                  </td>
+                  <td class="mail-date">5:42 PM</td>
+                </tr>
+
+                <tr class="read">
+                  <th class="mail-check">
+                    <input type="checkbox" id="checkbox7" />
+                    <label for="checkbox7"></label>
+                  </th>
+                  <td class="mail-contact">
+                    <a href="mail-view.html">Harold Mendoza</a>
+                  </td>
+                  <td class="mail-subject">
+                    <a href="mail-view.html">Donec mauris lorem, rhoncus sed mattis et, vestibulum vitae tellus.</a>
+                  </td>
+                  <td class="mail-date">Mar 17</td>
+                </tr>
+
+                <tr class="read">
+                  <th class="mail-check">
+                    <input type="checkbox" id="checkbox8" />
+                    <label for="checkbox8"></label>
+                  </th>
+                  <td class="mail-contact">
+                    <a href="mail-view.html">Alfred Graham</a>
+                  </td>
+                  <td class="mail-subject">
+                    <a href="mail-view.html">Integer congue congue viverra. Maecenas fringilla ac orci at interdum.</a>
+                  </td>
+                  <td class="mail-date">Apr 9</td>
+                </tr>
+
+                <tr class="read">
+                  <th class="mail-check">
+                    <input type="checkbox" id="checkbox9" />
+                    <label for="checkbox9"></label>
+                  </th>
+                  <td class="mail-contact">
+                    <a href="mail-view.html">Judy Graves</a>
+                  </td>
+                  <td class="mail-subject">
+                    <a href="mail-view.html">Quisque laoreet dolor vel metus imperdiet, ut venenatis odio congue.</a>
+                  </td>
+                  <td class="mail-date">1:48 AM</td>
+                </tr>
+
+                <tr class="read">
+                  <th class="mail-check">
+                    <input type="checkbox" id="checkbox10" />
+                    <label for="checkbox10"></label>
+                  </th>
+                  <td class="mail-contact">
+                    <a href="mail-view.html">Joanne Stephens</a>
+                  </td>
+                  <td class="mail-subject">
+                    <a href="mail-view.html">Nullam at venenatis turpis. Sed hendrerit pellentesque neque, id vestibulum sem eleifend eget.</a>
+                  </td>
+                  <td class="mail-date">Jun 28</td>
+                </tr>
+
+                <tr class="read">
+                  <th class="mail-check">
+                    <input type="checkbox" id="checkbox11" />
+                    <label for="checkbox11"></label>
+                  </th>
+                  <td class="mail-contact">
+                    <a href="mail-view.html">Ethan Baker</a>
+                  </td>
+                  <td class="mail-subject">
+                    <a href="mail-view.html">Nullam finibus malesuada nulla nec viverra. Maecenas eget ipsum at odio venenatis consequat.</a>
+                  </td>
+                  <td class="mail-date">Jul 1</td>
+                </tr>
+
+                <tr class="read">
+                  <th class="mail-check">
+                    <input type="checkbox" id="checkbox12" />
+                    <label for="checkbox12"></label>
+                  </th>
+                  <td class="mail-contact">
+                    <a href="mail-view.html">Gilbert Hughes</a>
+                  </td>
+                  <td class="mail-subject">
+                    <a href="mail-view.html">Maecenas ullamcorper elit vitae odio laoreet vehicula.</a>
+                  </td>
+                  <td class="mail-date">Sep 8</td>
+                </tr>
+
+                <tr class="read">
+                  <th class="mail-check">
+                    <input type="checkbox" id="checkbox13" />
+                    <label for="checkbox13"></label>
+                  </th>
+                  <td class="mail-contact">
+                    <a href="mail-view.html">Liam Hudson</a>
+                  </td>
+                  <td class="mail-subject">
+                    <a href="mail-view.html">Donec tempor elementum augue, ut condimentum dolor porta vitae.</a>
+                  </td>
+                  <td class="mail-date">9:00 PM</td>
+                </tr>
+
+                <tr class="read">
+                  <th class="mail-check">
+                    <input type="checkbox" id="checkbox14" />
+                    <label for="checkbox14"></label>
+                  </th>
+                  <td class="mail-contact">
+                    <a href="mail-view.html">Harold Mendoza</a>
+                  </td>
+                  <td class="mail-subject">
+                    <a href="mail-view.html">Proin efficitur elementum risus fermentum mattis.</a>
+                  </td>
+                  <td class="mail-date">3:12 PM</td>
+                </tr>
+
+                <tr class="read">
+                  <th class="mail-check">
+                    <input type="checkbox" id="checkbox15" />
+                    <label for="checkbox15"></label>
+                  </th>
+                  <td class="mail-contact">
+                    <a href="mail-view.html">Alfred Graham</a>
+                  </td>
+                  <td class="mail-subject">
+                    <a href="mail-view.html">Cras at nibh euismod, rutrum risus id, semper ex. Sed condimentum felis at porta rutrum.</a>
+                  </td>
+                  <td class="mail-date">8:22 AM</td>
+                </tr>
+
+                <tr class="read">
+                  <th class="mail-check">
+                    <input type="checkbox" id="checkbox16" />
+                    <label for="checkbox16"></label>
+                  </th>
+                  <td class="mail-contact">
+                    <a href="mail-view.html">Judy Graves</a>
+                  </td>
+                  <td class="mail-subject">
+                    <a href="mail-view.html">Aenean vestibulum sem vitae elit varius placerat.</a>
+                  </td>
+                  <td class="mail-date">May 15</td>
+                </tr>
+
+                <tr class="read">
+                  <th class="mail-check">
+                    <input type="checkbox" id="checkbox17" />
+                    <label for="checkbox17"></label>
+                  </th>
+                  <td class="mail-contact">
+                    <a href="mail-view.html">Joanne Stephens</a>
+                  </td>
+                  <td class="mail-subject">
+                    <a href="mail-view.html">In aliquet sodales mauris, eu tempus leo dictum a.</a>
+                  </td>
+                  <td class="mail-date">Oct 12</td>
+                </tr>
+
+                <tr class="read">
+                  <th class="mail-check">
+                    <input type="checkbox" id="checkbox18" />
+                    <label for="checkbox18"></label>
+                  </th>
+                  <td class="mail-contact">
+                    <a href="mail-view.html">Ethan Baker</a>
+                  </td>
+                  <td class="mail-subject">
+                    <a href="mail-view.html">Proin vel vulputate tortor. Integer vulputate augue a sapien semper molestie.</a>
+                  </td>
+                  <td class="mail-date">November 30</td>
+                </tr>
+
+                <tr class="read">
+                  <th class="mail-check">
+                    <input type="checkbox" id="checkbox19" />
+                    <label for="checkbox19"></label>
+                  </th>
+                  <td class="mail-contact">
+                    <a href="mail-view.html">Gilbert Hughes</a>
+                  </td>
+                  <td class="mail-subject">
+                    <a href="mail-view.html">Mauris in purus sit amet mauris tincidunt rutrum.</a>
+                  </td>
+                  <td class="mail-date">1:22 PM</td>
+                </tr>
+
+                <tr class="read">
+                  <th class="mail-check">
+                    <input type="checkbox" id="checkbox20" />
+                    <label for="checkbox20"></label>
+                  </th>
+                  <td class="mail-contact">
+                    <a href="mail-view.html">Liam Hudson</a>
+                  </td>
+                  <td class="mail-subject">
+                    <a href="mail-view.html">Etiam vel orci nibh. Aliquam tempus, metus id eleifend tempor, sapien eros hendrerit tellus, vitae venenatis velit tortor sit amet mauris.</a>
+                  </td>
+                  <td class="mail-date">2:42 AM</td>
+                </tr>
+
+                <tr class="read">
+                  <th class="mail-check">
+                    <input type="checkbox" id="checkbox21" />
+                    <label for="checkbox21"></label>
+                  </th>
+                  <td class="mail-contact">
+                    <a href="mail-view.html">Harold Mendoza</a>
+                  </td>
+                  <td class="mail-subject">
+                    <a href="mail-view.html">Aliquam eget dui dui. Vestibulum sollicitudin dui a neque tempus, non tincidunt nibh tempor.</a>
+                  </td>
+                  <td class="mail-date">Jan 2</td>
+                </tr>
+
+                <tr class="read">
+                  <th class="mail-check">
+                    <input type="checkbox" id="checkbox22" />
+                    <label for="checkbox22"></label>
+                  </th>
+                  <td class="mail-contact">
+                    <a href="mail-view.html">Alfred Graham</a>
+                  </td>
+                  <td class="mail-subject">
+                    <a href="mail-view.html">Morbi tempus orci ante, eget ultrices turpis tristique eget.</a>
+                  </td>
+                  <td class="mail-date">Nov 16</td>
+                </tr>
+
+                <tr class="read">
+                  <th class="mail-check">
+                    <input type="checkbox" id="checkbox23" />
+                    <label for="checkbox23"></label>
+                  </th>
+                  <td class="mail-contact">
+                    <a href="mail-view.html">Judy Graves</a>
+                  </td>
+                  <td class="mail-subject">
+                    <a href="mail-view.html">Etiam molestie sit amet lectus non placerat.</a>
+                  </td>
+                  <td class="mail-date">0:00 PM</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+          <div class="center-align">
+            <a href="#!" class="btn-flat waves-effect grey-text text-darken-1">Load More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!-- /Main Content -->
+
+<!-- Search Bar -->
+<div class="search-bar">
+  <div class="layer-overlay"></div>
+  <div class="layer-content">
+    <form action="#!">
+      <!-- Header -->
+      <a class="search-bar-toggle grey-text text-darken-2" href="#!"><i class="mdi-navigation-close"></i></a>
+
+      <!-- Search Input -->
+      <div class="input-field">
+        <i class="mdi-action-search prefix"></i>
+        <input type="text" name="con-search" placeholder="Search...">
+      </div>
+
+      <!-- Search Results -->
+      <div class="search-results">
+
+        <div class="row">
+          <div class="col s12 l4">
+            <h4>Top Vendors</h4>
+
+            <div class="each-result">
+              <img src="assets/_con/images/user2.jpg" alt="Felecia Castro" class="circle photo">
+              <div class="title">Felecia Castro</div>
+              <div class="label">Event Manager</div>
+            </div>
+
+            <div class="each-result">
+              <img src="assets/_con/images/user3.jpg" alt="Max Brooks" class="circle photo">
+              <div class="title">Max Brooks</div>
+              <div class="label">Photographer</div>
+            </div>
+
+            <div class="each-result">
+              <img src="assets/_con/images/user4.jpg" alt="Patsy Griffin" class="circle photo">
+              <div class="title">Patsy Griffin</div>
+              <div class="label">Caterer and Florals</div>
+            </div>
+
+            <div class="each-result">
+              <img src="assets/_con/images/user6.jpg" alt="Vernon Garrett" class="circle photo">
+              <div class="title">Vernon Garrett</div>
+              <div class="label">Banquets</div>
+            </div>
+          </div>
+          <div class="col s12 l4">
+            <h4>More Vendors</h4>
+
+            <div class="each-result">
+              <div class="icon circle blue white-text">MD</div>
+              <div class="title">Vernon Garrett</div>
+              <div class="label nowrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi consequatur debitis veritatis dolorum, enim libero!</div>
+            </div>
+
+            <div class="each-result">
+              <div class="icon circle teal white-text">
+                <i class="fa fa-dashboard"></i>
+              </div>
+              <div class="title">Marriage Inc.</div>
+              <div class="label nowrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi consequatur debitis veritatis dolorum, enim libero!</div>
+            </div>
+
+            <div class="each-result">
+              <div class="icon circle orange white-text">RD</div>
+              <div class="title">Photos Inc.</div>
+              <div class="label nowrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi consequatur debitis veritatis dolorum, enim libero!</div>
+            </div>
+
+            <div class="each-result">
+              <div class="icon circle red white-text">
+                <i class="fa fa-tablet"></i>
+              </div>
+              <div class="title">Banquets Inc.</div>
+              <div class="label nowrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi consequatur debitis veritatis dolorum, enim libero!</div>
+            </div>
+          </div>
+          <div class="col s12 l4">
+            <h4>Guests</h4>
+
+            <div class="no-result">No results were found ;(</div>
+          </div>
+        </div>
+
+      </div>
+
+    </form>
+  </div>
+</div>
+<!-- /Search Bar -->
+
+<footer>&copy; 2015 <strong>URINVITD</strong>. All rights reserved. <a href="http://deepakpathak.in/urinvitd">URINVITD</a>
+</footer>
+  <!-- DEMO [REMOVE IT ON PRODUCTION] -->
+  <script type="text/javascript" src="assets/_con/js/_demo.js"></script>
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="assets/jquery/jquery.min.js"></script>
+
+  <!-- jQuery RAF (improved animation performance) -->
+  <script type="text/javascript" src="assets/jqueryRAF/jquery.requestAnimationFrame.min.js"></script>
+
+  <!-- nanoScroller -->
+  <script type="text/javascript" src="assets/nanoScroller/jquery.nanoscroller.min.js"></script>
+
+  <!-- Materialize -->
+  <script type="text/javascript" src="assets/materialize/js/materialize.min.js"></script>
+
+  <!-- Sortable -->
+  <script type="text/javascript" src="assets/sortable/Sortable.min.js"></script>
+
+  <!-- Main -->
+  <script type="text/javascript" src="assets/_con/js/_con.min.js"></script>
+
+
+  <!-- Google Prettify -->
+  <script type="text/javascript" src="assets/google-code-prettify/prettify.js"></script>
+</body>
+
+</html>
